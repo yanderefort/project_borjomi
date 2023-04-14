@@ -14,9 +14,8 @@ label start:
 
     scene bg room
 
-    show vova
+    show image "characters/tati.png"
 
     v "я пидарас"
-
 
     return
