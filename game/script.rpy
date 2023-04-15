@@ -3,6 +3,7 @@
 # Определение персонажей игры.
 define v = Character('Вова Грач', color="#3ba2e7")
 define m = Character('Максим Коняев', color="#3ba2e7")
+define gay = 0
 define a = Character('Закадровый Голос', color="#3ba2e7")
 define c = Character('zxcursed', color="#fa3cbb")
 image tati = "characters/tati.png"
@@ -18,14 +19,10 @@ image cursed = "characters/cursed.png"
 label start:
     scene image "scenes/scene.jpg"
     show tati
-    v "Привет! Это техно-демо."
+    v "Привет! Это техно-демо второй версии! В этой версии я изучал переменные. Концовки вырезаны."
     hide tati
-    show tati2
-    v "Мы учимся работать с движком, поэтому даже в этой маленькой демке будут косяки."
-    v "Мы во всю готовы работать с игрой, но наши сценаристы ничего не делают!"
-    hide tati2
     show tati at right
-    v " а еще нам не несут гонорар."
+    v " Я все еще жду гонорар. "
     show cursed at left 
     play music "audio/newera.mp3" volume 0.5
     c "всем привет я ZXCURSED я тоже разработчик этой игры."
@@ -34,22 +31,60 @@ label start:
     hide cursed
     show cursed at center
     m "нам впадлу писать код честно."
-    m "кто пидор епта"
-    hide tati
     hide cursed
-   
-menu:
-    "КТО ПИДОР"
-    
-    "вова пидор":
-        show cursed at center
-        m "ТУДА ЕГО НАХУЙ"
-        jump izhesk
 
-    "макс пидор":
+menu:
+    "debuug"
+    
+    "дебаг переменных":
         show tati at center
+<<<<<<< Updated upstream:game/script.rpy
         v "ТУДА ЕГО НАХУЙ"
         jump buguruslan
+=======
+        v "добро пожаловать в дебаг переменных"
+        jump debug
+
+return
+>>>>>>> Stashed changes:project_borjomi/game/script.rpy
+
+label debug:
+menu:
+    "Тест на сколько процентов ты гей, выбирай"
+    
+    "Я слушаю зхскурседа":
+        m "Хорошо! + 1 к общему числу!"
+        $ gay +1 
+        jump test
+
+    "Я люблю ебаться в жопу":
+        v "Следующий вопрос!"
+        jump test
+
+label test: 
+menu:
+    "Следующий вопрос"
+    
+    "Я играю в доту":
+        m "Хорошо! + 1 к общему числу!"
+        $ gay +1 
+        jump test2
+
+    "я играю с хуем отца":
+        v "готово!!"
+        jump test2
+
+label test2:
+
+m " сейчас решится твоя судьба "
+
+if gay == 0:
+    m " ты не гей!"
+    pass
+else:
+    m " ты пидорс! "
+
+    return
 
 label izhesk:
     scene image "scenes/izhesk.jpg"
