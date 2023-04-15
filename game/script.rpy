@@ -4,6 +4,7 @@
 define v = Character('Вова Грач', color="#3ba2e7")
 define m = Character('Максим Коняев', color="#3ba2e7")
 define a = Character('Закадровый Голос', color="#3ba2e7")
+define c = Character('zxcursed', color="#fa3cbb")
 image tati = "characters/tati.png"
 image tati2 = "characters/tati 4.png"
 image cursed = "characters/cursed.png"
@@ -26,7 +27,10 @@ label start:
     show tati at right
     v " а еще нам не несут гонорар."
     show cursed at left 
-    m "всем привет я максим коняев я тоже разработчик этой игры."
+    play music "audio/newera.mp3" volume 0.5
+    c "всем привет я ZXCURSED я тоже разработчик этой игры."
+    c "тише тише"
+    c "НА МНЕ ДЖЕТПАК ЭТО ПУТЬ ВВЕРХ ИО"
     hide cursed
     show cursed at center
     m "нам впадлу писать код честно."
