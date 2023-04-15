@@ -46,17 +46,17 @@ menu:
         show tati at center
         v "ТУДА ЕГО НАХУЙ"
         jump buguruslan
-return
 
 label izhesk:
-scene image "scenes/izhesk.jpg"
-a "после того как вы послали вови грача нахуй, вы попали в ижевск, поздравляем!"
-"лучшая концовка"
-return
+    scene image "scenes/izhesk.jpg"
+    a "после того как вы послали вови грача нахуй, вы попали в ижевск, поздравляем!"
+    "лучшая концовка"
+    return
 
 label buguruslan:
-scene image "scenes/buguruslan.jpg"
-a "после того как вы послали макса нахуй, вы класть асфальт в бугуруслан, не поздравляем!"
-"худшая концовка"
-return
+    scene image "scenes/buguruslan.jpg"
+    a "после того как вы послали макса нахуй, вы класть асфальт в бугуруслан, не поздравляем!"
+    play music "audio/outro.mp3"
+    "худшая концовка"
+    return
 
