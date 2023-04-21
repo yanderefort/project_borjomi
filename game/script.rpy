@@ -1,12 +1,12 @@
 ﻿# Вы можете расположить сценарий своей игры в этом файле.
 
 # Определение персонажей игры.
-define v = Character('Вова Грач', color="#3ba2e7")
+define v = Character('Айко', color="#3ba2e7")
 define m = Character('Максим Коняев', color="#3ba2e7")
 define gay = 0
 define a = Character('Закадровый Голос', color="#3ba2e7")
 define c = Character('zxcursed', color="#fa3cbb")
-image tati = "characters/tati.png"
+image tati = "characters/tati normal.png"
 image tati2 = "characters/tati 4.png"
 image cursed = "characters/cursed.png"
 
@@ -17,9 +17,9 @@ image cursed = "characters/cursed.png"
 
 # Игра начинается здесь:
 label start:
-    scene image "scenes/scene.jpg"
+    scene image "scenes/ladder.png" with Dissolve(1)
     show tati
-    v "Привет! Это техно-демо второй версии! В этой версии я изучал переменные. Концовки вырезаны."
+    v "Привет!"
     hide tati
     show tati at right
     v " Я все еще жду гонорар. "
