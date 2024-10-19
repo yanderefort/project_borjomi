@@ -8,7 +8,7 @@ define a = Character('Закадровый Голос', color="#3ba2e7")
 define c = Character('zxcursed', color="#fa3cbb")
 image tati = "characters/tati normal.png"
 image tati2 = "characters/tati 4.png"
-image cursed = "characters/cursed.png"
+image cursed = "characters/valera.png"
 
 # Вместо использования оператора image можете просто
 # складывать все ваши файлы изображений в папку images.
@@ -71,20 +71,22 @@ label test2:
     m " сейчас решится твоя судьба "
     if gay == 0:
         m "ты не гей!"
+        jump izhesk
         pass
     else:
         m "ты пидорс! "
+        jump buguruslan
     return
 
 label izhesk:
     scene image "scenes/izhesk.jpg"
-    a "после того как вы послали вови грача нахуй, вы попали в ижевск, поздравляем!"
+    a "тебя обозначили не в петухи, вы попали в ижевск, поздравляем!"
     "лучшая концовка"
     return
 
 label buguruslan:
     scene image "scenes/buguruslan.jpg"
-    a "после того как вы послали макса нахуй, вы класть асфальт в бугуруслан, не поздравляем!"
+    a "после того как вас признали петухом, вы отправляетесь класть асфальт в бугуруслан, не поздравляем!"
     play music "audio/outro.mp3"
     "худшая концовка"
     return
